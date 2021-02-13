@@ -1,0 +1,13 @@
+providers:
+- name: github
+  token: ${GITHUB_ACCESS_TOKEN}
+  repositories:
+    - name: test_repository_github
+      url: https://github.com/golang/go.git
+      synchronization_repeat_time: 3600 # minutes
+- name: gitlab
+  token: ${GITLAB_ACCESS_TOKEN}
+  repositories:
+    - name: test_repository_gitlab
+      url: https://gitlab.com/gitlab-org/gitlab.git
+      synchronization_repeat_time: 1200 # minutes
